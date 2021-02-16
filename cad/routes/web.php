@@ -21,11 +21,16 @@ Route::get('/', function () {
 
 //Produtos
 Route::get('/produtos', [ControladorProduto::class, 'index']);
+Route::get('/produtos/novo', [ControladorProduto::class, 'create']);
+Route::post('/produtos', [ControladorProduto::class, 'store']);
+Route::get('/produtos/apagar/{id}', [ControladorProduto::class, 'destroy']);
+Route::get('/produtos/editar/{id}', [ControladorProduto::class, 'edit']);
+Route::post('/produtos/{id}', [ControladorProduto::class, 'update']);
 
 //Categorias
+Route::post('/categorias/{id}', [ControladorCategoria::class, 'update']);
 Route::get('/categorias', [ControladorCategoria::class, 'index']);
 Route::get('/categorias/apagar/{id}', [ControladorCategoria::class, 'destroy']);
 Route::get('/categorias/editar/{id}', [ControladorCategoria::class, 'edit']);
-Route::put('/categorias/{id}', [ControladorCategoria::class, 'update']);
 Route::post('/categorias', [ControladorCategoria::class, 'store']);
 Route::get('/categorias/novo', [ControladorCategoria::class, 'create']);

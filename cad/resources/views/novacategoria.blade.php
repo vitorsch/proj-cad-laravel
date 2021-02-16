@@ -12,7 +12,7 @@
                     class="form-control" placeholder="Categoria">
             </div>
             <button type="submit" class="btn btn-primary btn-sm">Salvar</button>
-            <button type="cancel" class="btn btn-danger btn-sm">Cancel</button>
+            <button type="button" class="btn btn-danger btn-sm" onclick="window.history.back();">Cancel</button>
         </form>
     </div>
 </div>
